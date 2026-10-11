@@ -1,0 +1,49 @@
+{
+  "name": "CHIPCOSNEAKS - Fresh Kicks. Bold Energy.",
+  "short_name": "CHIPCOSNEAKS",
+  "description": "Premium sneakers and streetwear. Fresh kicks, bold energy, your style your rules.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FFFFFF",
+  "theme_color": "#62469B",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["shopping", "lifestyle", "fashion"],
+  "screenshots": [],
+  "shortcuts": [
+    {
+      "name": "Shop Sneakers",
+      "short_name": "Shop",
+      "description": "Browse our sneaker collection",
+      "url": "/shop",
+      "icons": [{ "src": "/icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "New Arrivals",
+      "short_name": "New",
+      "description": "Check out the latest drops",
+      "url": "/shop?filter=new",
+      "icons": [{ "src": "/icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Cart",
+      "short_name": "Cart",
+      "description": "View your shopping cart",
+      "url": "/cart",
+      "icons": [{ "src": "/icon-192.png", "sizes": "192x192" }]
+    }
+  ]
+}

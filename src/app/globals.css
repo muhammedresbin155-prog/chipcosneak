@@ -1,0 +1,300 @@
+@import "tailwindcss";
+
+:root {
+  --background: #FFFFFF;
+  --foreground: #17131F;
+  --primary: #62469B;
+  --primary-hover: #4E347F;
+  --secondary: #FFFFFF;
+  --dark-purple: #4E347F;
+  --light-lavender: #F0EAF8;
+  --dark-text: #17131F;
+  --muted: #6B6B6B;
+  --border: #E5E5E5;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
+  --color-secondary: var(--secondary);
+  --color-dark-purple: var(--dark-purple);
+  --color-light-lavender: var(--light-lavender);
+  --color-dark-text: var(--dark-text);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+  --font-sans: var(--font-inter);
+  --font-display: var(--font-anton);
+  --font-heading: var(--font-bebas);
+  --animate-fade-in: fade-in 0.5s ease-out;
+  --animate-slide-up: slide-up 0.6s ease-out;
+  --animate-slide-down: slide-down 0.3s ease-out;
+  --animate-scale-in: scale-in 0.2s ease-out;
+  --animate-shimmer: shimmer 2s infinite;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+}
+
+@font-face {
+  font-family: 'Anton';
+  src: url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+}
+
+@font-face {
+  font-family: 'Bebas Neue';
+  src: url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slide-up {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slide-down {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes scale-in {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: 'Inter', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.font-display {
+  font-family: 'Anton', sans-serif;
+  letter-spacing: 0.02em;
+}
+
+.font-heading {
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 0.03em;
+}
+
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .container {
+    padding: 0 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    padding: 0 3rem;
+  }
+}
+
+.btn-primary {
+  @apply inline-flex items-center justify-center px-6 py-3 bg-primary text-white font-medium rounded-lg transition-all duration-200 hover:bg-primary-hover hover:shadow-lg hover:shadow-primary/30 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed;
+}
+
+.btn-secondary {
+  @apply inline-flex items-center justify-center px-6 py-3 bg-white text-primary border-2 border-primary font-medium rounded-lg transition-all duration-200 hover:bg-light-lavender hover:shadow-lg hover:shadow-primary/20 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed;
+}
+
+.btn-ghost {
+  @apply inline-flex items-center justify-center px-4 py-2 text-dark-text font-medium rounded-lg transition-all duration-200 hover:bg-light-lavender focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed;
+}
+
+.input-field {
+  @apply w-full px-4 py-3 bg-white border border-border rounded-lg text-dark-text placeholder-muted transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent;
+}
+
+.card {
+  @apply bg-white rounded-xl border border-border overflow-hidden transition-all duration-300 hover:shadow-xl hover:shadow-primary/10 hover:-translate-y-1;
+}
+
+.product-image {
+  @apply w-full h-64 object-cover transition-transform duration-500 group-hover:scale-105;
+}
+
+.section-title {
+  @apply font-heading text-3xl md:text-4xl lg:text-5xl font-normal text-dark-text;
+}
+
+.section-subtitle {
+  @apply text-muted mt-2 max-w-2xl;
+}
+
+.skeleton {
+  @apply animate-shimmer bg-gradient-to-r from-light-lavender via-light-lavender/50 to-light-lavender bg-[length:200%_100%] rounded-lg;
+}
+
+.toast-enter {
+  animation: slide-down 0.3s ease-out;
+}
+
+.toast-exit {
+  animation: slide-up 0.2s ease-in reverse;
+}
+
+.cart-drawer-enter {
+  animation: slide-in-right 0.3s ease-out;
+}
+
+.cart-drawer-exit {
+  animation: slide-out-right 0.2s ease-in;
+}
+
+@keyframes slide-in-right {
+  from { transform: translateX(100%); }
+  to { transform: translateX(0); }
+}
+
+@keyframes slide-out-right {
+  from { transform: translateX(0); }
+  to { transform: translateX(100%); }
+}
+
+.mobile-nav-enter {
+  animation: slide-down 0.3s ease-out;
+}
+
+.mobile-nav-exit {
+  animation: slide-up 0.2s ease-in reverse;
+}
+
+.hero-gradient {
+  background: linear-gradient(135deg, #62469B 0%, #4E347F 50%, #3D2B6B 100%);
+}
+
+.focus-visible-ring {
+  @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2;
+}
+
+.skip-link {
+  @apply absolute -top-10 left-4 z-50 px-4 py-2 bg-primary text-white rounded-lg transition-all duration-200 focus:top-4;
+}
+
+.visually-hidden {
+  @apply absolute w-px h-px p-0 -m-px overflow-hidden whitespace-nowrap border-0;
+  clip: rect(0, 0, 0, 0);
+}
+
+.image-zoom {
+  @apply transition-transform duration-500 ease-out;
+}
+
+.image-zoom:hover {
+  @apply scale-110;
+}
+
+.quantity-btn {
+  @apply w-10 h-10 flex items-center justify-center rounded-lg border border-border bg-white text-dark-text transition-all duration-200 hover:bg-light-lavender hover:border-primary focus:outline-none focus:ring-2 focus:ring-primary;
+}
+
+.size-btn {
+  @apply w-12 h-12 flex items-center justify-center rounded-lg border-2 border-border bg-white text-dark-text font-medium transition-all duration-200 hover:border-primary hover:text-primary focus:outline-none focus:ring-2 focus:ring-primary;
+}
+
+.size-btn-selected {
+  @apply border-primary bg-primary text-white hover:border-primary hover:bg-primary-hover;
+}
+
+.size-btn-disabled {
+  @apply border-border/50 bg-gray-50 text-muted cursor-not-allowed line-through;
+}
+
+.color-swatch {
+  @apply w-10 h-10 rounded-full border-2 border-transparent transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2;
+}
+
+.color-swatch-selected {
+  @apply border-primary ring-2 ring-primary ring-offset-2 scale-110;
+}
+
+.color-swatch-disabled {
+  @apply opacity-40 cursor-not-allowed;
+}
+
+.badge {
+  @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium;
+}
+
+.badge-new {
+  @apply bg-primary text-white;
+}
+
+.badge-sale {
+  @apply bg-red-500 text-white;
+}
+
+.badge-limited {
+  @apply bg-amber-500 text-white;
+}
+
+.badge-sold-out {
+  @apply bg-gray-500 text-white;
+}
+
+.price-current {
+  @apply font-heading text-2xl font-normal text-dark-text;
+}
+
+.price-original {
+  @apply text-muted line-through text-lg;
+}
+
+.price-sale {
+  @apply text-red-500 font-heading text-2xl font-normal;
+}
+
+.link-underline {
+  @apply relative after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-primary after:scale-x-0 after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left;
+}
+
+.dropdown-enter {
+  animation: fade-in 0.15s ease-out, slide-down 0.15s ease-out;
+}
+
+.dropdown-exit {
+  animation: fade-in 0.1s ease-in reverse, slide-up 0.1s ease-in reverse;
+}

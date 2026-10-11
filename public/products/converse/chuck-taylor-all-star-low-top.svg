@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" fill="none">
+  <rect width="400" height="400" fill="#F5F5F5"/>
+  <path d="M80 260 L80 160 Q80 120 120 120 L280 120 Q320 120 320 160 L320 260 Z" stroke="#62469B" stroke-width="8" fill="white" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M120 120 L120 100" stroke="#62469B" stroke-width="4" stroke-linecap="round"/>
+  <path d="M280 120 L280 100" stroke="#62469B" stroke-width="4" stroke-linecap="round"/>
+  <ellipse cx="140" cy="260" rx="35" ry="15" stroke="#62469B" stroke-width="4" fill="white" opacity="0.3"/>
+  <ellipse cx="260" cy="260" rx="35" ry="15" stroke="#62469B" stroke-width="4" fill="white" opacity="0.3"/>
+  <path d="M140 245 L140 230" stroke="#62469B" stroke-width="3" stroke-linecap="round"/>
+  <path d="M260 245 L260 230" stroke="#62469B" stroke-width="3" stroke-linecap="round"/>
+  <text x="200" y="320" text-anchor="middle" font-family="system-ui, sans-serif" font-size="16" fill="#62469B" opacity="0.6">CHUCK TAYLOR LOW</text>
+</svg>

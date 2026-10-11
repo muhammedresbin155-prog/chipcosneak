@@ -1,0 +1,141 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" fill="none">
+  <defs>
+    <linearGradient id="bootGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#D4A574;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#C49A6C;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#B88A5A;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="soleGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#8B6B4A;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#5D4E37;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="laceGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#F5F0E8;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#D4C8B8;stop-opacity:1" />
+    </linearGradient>
+    <radialGradient id="highlight" cx="30%" cy="30%" r="50%">
+      <stop offset="0%" style="stop-color:#FFFFFF;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#FFFFFF;stop-opacity:0" />
+    </radialGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="20" stdDeviation="30" flood-color="#000000" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+  
+  <!-- Subtle background circle -->
+  <circle cx="400" cy="550" r="380" fill="#F5F0E8" opacity="0.15"/>
+  
+  <!-- Boot shadow -->
+  <ellipse cx="400" cy="920" rx="180" ry="25" fill="#000000" opacity="0.15"/>
+  
+  <!-- Main boot shape -->
+  <g filter="url(#shadow)">
+    <!-- Sole -->
+    <path d="M180 780 L160 790 Q150 810 200 820 L600 820 Q650 810 640 790 L620 780 Q600 760 400 760 Q200 760 180 780 Z" fill="url(#soleGradient)"/>
+    
+    <!-- Sole tread pattern -->
+    <g fill="#4A3A2A" opacity="0.6">
+      <rect x="190" y="795" width="15" height="12" rx="2"/>
+      <rect x="220" y="795" width="15" height="12" rx="2"/>
+      <rect x="250" y="795" width="15" height="12" rx="2"/>
+      <rect x="280" y="795" width="15" height="12" rx="2"/>
+      <rect x="310" y="795" width="15" height="12" rx="2"/>
+      <rect x="340" y="795" width="15" height="12" rx="2"/>
+      <rect x="370" y="795" width="15" height="12" rx="2"/>
+      <rect x="400" y="795" width="15" height="12" rx="2"/>
+      <rect x="430" y="795" width="15" height="12" rx="2"/>
+      <rect x="460" y="795" width="15" height="12" rx="2"/>
+      <rect x="490" y="795" width="15" height="12" rx="2"/>
+      <rect x="520" y="795" width="15" height="12" rx="2"/>
+      <rect x="550" y="795" width="15" height="12" rx="2"/>
+      <rect x="580" y="795" width="15" height="12" rx="2"/>
+    </g>
+    
+    <!-- Welt stitching -->
+    <path d="M190 770 Q200 760 400 760 Q600 760 610 770" stroke="#3D2E1E" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <g stroke="#3D2E1E" stroke-width="1.5" fill="none">
+      <line x1="200" y1="768" x2="200" y2="778"/>
+      <line x1="240" y1="766" x2="240" y2="776"/>
+      <line x1="280" y1="766" x2="280" y2="776"/>
+      <line x1="320" y1="766" x2="320" y2="776"/>
+      <line x1="360" y1="766" x2="360" y2="776"/>
+      <line x1="400" y1="766" x2="400" y2="776"/>
+      <line x1="440" y1="766" x2="440" y2="776"/>
+      <line x1="480" y1="766" x2="480" y2="776"/>
+      <line x1="520" y1="766" x2="520" y2="776"/>
+      <line x1="560" y1="768" x2="560" y2="778"/>
+    </g>
+    
+    <!-- Boot upper - main leather -->
+    <path d="M190 770 Q170 740 160 650 Q150 550 180 480 Q200 420 280 380 Q360 350 400 360 Q440 350 520 380 Q600 420 620 480 Q650 550 640 650 Q630 740 610 770" fill="url(#bootGradient)"/>
+    
+    <!-- Highlight on leather -->
+    <path d="M220 750 Q230 700 280 600 Q320 520 380 480 Q420 450 400 480 Q380 520 320 600 Q280 700 220 750" fill="url(#highlight)"/>
+    
+    <!-- Side panel stitching -->
+    <path d="M280 380 Q320 420 340 500 Q350 580 340 650" stroke="#3D2E1E" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.5"/>
+    <path d="M520 380 Q480 420 460 500 Q450 580 460 650" stroke="#3D2E1E" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.5"/>
+    
+    <!-- Tongue -->
+    <path d="M320 380 Q340 350 380 360 Q390 450 380 520 Q370 580 340 600 Q310 580 300 500 Q290 420 320 380" fill="#C49A6C" opacity="0.9"/>
+    <path d="M330 400 Q350 380 370 390 Q375 460 370 510 Q360 560 340 580 Q320 560 310 500 Q305 440 330 400" fill="url(#highlight)"/>
+    
+    <!-- Tongue label -->
+    <rect x="335" y="430" width="30" height="40" rx="3" fill="#1A1A1A" opacity="0.8"/>
+    <text x="350" y="458" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" font-weight="bold" fill="#D4A574" letter-spacing="0.5">TIMBERLAND</text>
+    
+    <!-- Lace eyelets -->
+    <g fill="url(#laceGradient)" stroke="#8B6B4A" stroke-width="1.5">
+      <ellipse cx="310" cy="420" rx="8" ry="5"/>
+      <ellipse cx="390" cy="415" rx="8" ry="5"/>
+      <ellipse cx="305" cy="470" rx="8" ry="5"/>
+      <ellipse cx="395" cy="465" rx="8" ry="5"/>
+      <ellipse cx="300" cy="520" rx="8" ry="5"/>
+      <ellipse cx="400" cy="515" rx="8" ry="5"/>
+      <ellipse cx="295" cy="570" rx="8" ry="5"/>
+      <ellipse cx="405" cy="565" rx="8" ry="5"/>
+    </g>
+    
+    <!-- Laces -->
+    <g stroke="#F5F0E8" stroke-width="4" fill="none" stroke-linecap="round">
+      <path d="M310 420 Q350 415 390 415"/>
+      <path d="M305 470 Q350 465 395 465"/>
+      <path d="M300 520 Q350 515 400 515"/>
+      <path d="M295 570 Q350 565 405 565"/>
+    </g>
+    <g stroke="#D4C8B8" stroke-width="2" fill="none" stroke-linecap="round">
+      <path d="M310 420 Q350 415 390 415"/>
+      <path d="M305 470 Q350 465 395 465"/>
+      <path d="M300 520 Q350 515 400 515"/>
+      <path d="M295 570 Q350 565 405 565"/>
+    </g>
+    
+    <!-- Top collar padding -->
+    <path d="M190 770 Q220 740 280 710 Q320 690 380 680 Q420 690 480 710 Q540 740 560 770" stroke="#B88A5A" stroke-width="12" fill="none" stroke-linecap="round" opacity="0.5"/>
+    
+    <!-- Heel counter -->
+    <path d="M560 770 Q580 700 570 600 Q560 520 520 480 Q480 450 440 480" stroke="#B88A5A" stroke-width="8" fill="none" stroke-linecap="round" opacity="0.4"/>
+    
+    <!-- Heel loop -->
+    <path d="M520 480 Q560 440 580 420 Q570 380 530 370 Q490 380 480 420" fill="#C49A6C" opacity="0.8"/>
+    <path d="M525 475 Q550 440 565 415 Q560 385 525 375 Q495 385 485 415" fill="url(#highlight)"/>
+    
+    <!-- Tree logo on side -->
+    <g transform="translate(420, 550) scale(0.8)">
+      <path d="M0 0 L-15 30 L15 30 Z" fill="#1A1A1A" opacity="0.6"/>
+      <path d="M0 30 L-25 70 L25 70 Z" fill="#1A1A1A" opacity="0.6"/>
+      <path d="M0 70 L-35 110 L35 110 Z" fill="#1A1A1A" opacity="0.6"/>
+      <rect x="-8" y="110" width="16" height="20" fill="#1A1A1A" opacity="0.6"/>
+    </g>
+    
+    <!-- Yellow stitching detail on toe -->
+    <g stroke="#D4A574" stroke-width="1.5" fill="none" opacity="0.7">
+      <path d="M250 650 Q280 630 300 620"/>
+      <path d="M260 670 Q290 650 310 640"/>
+      <path d="M270 690 Q300 670 320 660"/>
+    </g>
+  </g>
+  
+  <!-- Subtle brand text at bottom -->
+  <text x="400" y="970" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" fill="#62469B" opacity="0.4" letter-spacing="4" font-weight="500">CHIPCOSNEAKS</text>
+</svg>

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" fill="none">
+  <rect width="400" height="400" fill="#F5F5F5"/>
+  <path d="M80 280 L80 140 Q80 100 120 100 L280 100 Q320 100 320 140 L320 280 Z" stroke="#62469B" stroke-width="8" fill="white" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M120 100 L120 80" stroke="#62469B" stroke-width="4" stroke-linecap="round"/>
+  <path d="M280 100 L280 80" stroke="#62469B" stroke-width="4" stroke-linecap="round"/>
+  <path d="M160 160 L240 240 M240 160 L160 240" stroke="#62469B" stroke-width="6" stroke-linecap="round"/>
+  <ellipse cx="140" cy="280" rx="35" ry="15" stroke="#62469B" stroke-width="4" fill="white" opacity="0.3"/>
+  <ellipse cx="260" cy="280" rx="35" ry="15" stroke="#62469B" stroke-width="4" fill="white" opacity="0.3"/>
+  <text x="200" y="340" text-anchor="middle" font-family="system-ui, sans-serif" font-size="16" fill="#62469B" opacity="0.6">SK8-HI</text>
+</svg>
