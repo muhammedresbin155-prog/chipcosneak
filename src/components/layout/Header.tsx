@@ -115,13 +115,14 @@ export const Header = () => {
       <AnnouncementBar />
       
       <nav className="container" aria-label="Main navigation">
-        <div className="flex items-center justify-between h-16 lg:h-20 gap-4">
+        <div className="flex items-center justify-between h-14 sm:h-16 lg:h-20 gap-2 sm:gap-4">
           <Link 
             href="/" 
             className="flex items-center flex-shrink-0"
             aria-label="CHIPCOSNEAKS Home"
           >
-            <span className="font-display text-2xl md:text-3xl text-primary tracking-tight">CHIPCOSNEAKS</span>
+            <span className="font-display text-xl sm:text-2xl md:text-3xl text-primary tracking-tight">CHIPCO</span>
+            <span className="font-display text-xl sm:text-2xl md:text-3xl text-dark-text tracking-tight">SNEAKS</span>
           </Link>
 
           <div className="hidden lg:flex items-center gap-1 flex-1 max-w-4xl relative z-30" role="menubar">
@@ -154,15 +155,15 @@ export const Header = () => {
             </div>
           </div>
 
-          <div className="flex items-center gap-2 lg:gap-4">
+          <div className="flex items-center gap-1.5 sm:gap-2 lg:gap-4">
             <button
               onClick={() => window.location.href = '/wishlist'}
-              className="relative p-2 text-muted hover:text-primary transition-colors lg:p-2.5 rounded-lg hover:bg-light-lavender transition-colors"
+              className="relative p-2 text-muted hover:text-primary transition-colors rounded-lg hover:bg-light-lavender"
               aria-label={`Wishlist${wishlistCount > 0 ? `, ${wishlistCount} items` : ''}`}
             >
-              <Heart className="w-6 h-6" strokeWidth={2} />
+              <Heart className="w-5 h-5 sm:w-6 sm:h-6" strokeWidth={2} />
               {wishlistCount > 0 && (
-                <span className="absolute -top-1 -right-1 w-5 h-5 bg-primary text-white text-xs font-medium rounded-full flex items-center justify-center">
+                <span className="absolute -top-1 -right-1 w-4 h-4 sm:w-5 sm:h-5 bg-primary text-white text-xs font-medium rounded-full flex items-center justify-center">
                   {wishlistCount > 9 ? '9+' : wishlistCount}
                 </span>
               )}
@@ -170,12 +171,12 @@ export const Header = () => {
 
             <button
               onClick={openCart}
-              className="relative p-2 text-muted hover:text-primary transition-colors lg:p-2.5 rounded-lg hover:bg-light-lavender transition-colors"
+              className="relative p-2 text-muted hover:text-primary transition-colors rounded-lg hover:bg-light-lavender"
               aria-label={`Shopping cart${cartCount > 0 ? `, ${cartCount} items` : ' empty'}`}
             >
-              <ShoppingBag className="w-6 h-6" strokeWidth={2} />
+              <ShoppingBag className="w-5 h-5 sm:w-6 sm:h-6" strokeWidth={2} />
               {cartCount > 0 && (
-                <span className="absolute -top-1 -right-1 w-5 h-5 bg-primary text-white text-xs font-medium rounded-full flex items-center justify-center">
+                <span className="absolute -top-1 -right-1 w-4 h-4 sm:w-5 sm:h-5 bg-primary text-white text-xs font-medium rounded-full flex items-center justify-center">
                   {cartCount > 9 ? '9+' : cartCount}
                 </span>
               )}
@@ -187,7 +188,7 @@ export const Header = () => {
               aria-label="Open menu"
               aria-expanded={isMobileMenuOpen}
             >
-              <Menu className="w-7 h-7" strokeWidth={2} />
+              <Menu className="w-6 h-6 sm:w-7 sm:h-7" strokeWidth={2} />
             </button>
           </div>
         </div>
@@ -330,7 +331,7 @@ const MobileMenu = React.forwardRef<HTMLDivElement, {
     >
       <div className="absolute inset-0 bg-black/50" onClick={onClose} aria-hidden="true" />
       
-      <div className="absolute right-0 top-0 bottom-0 w-full max-w-sm bg-white shadow-xl flex flex-col">
+      <div className="absolute right-0 top-0 bottom-0 w-full max-w-full bg-white shadow-xl flex flex-col">
         <div className="flex items-center justify-between p-4 border-b border-border">
           <h2 className="font-heading text-xl text-dark-text">Menu</h2>
           <button
@@ -427,3 +428,5 @@ const MobileNavItem = ({ item, onClose }: { item: typeof navigation[0]; onClose:
     </li>
   );
 };
+
+export default Header;
